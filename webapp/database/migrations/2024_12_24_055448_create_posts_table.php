@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->int('author_id');
+            $table->integer('author_id');
             $table->string('title');
             $table->text('content')->nullable(); //nullを許容
             $table->timestamps();
