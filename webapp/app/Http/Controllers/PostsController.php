@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 
 class PostsController extends Controller
-{ //Q03
+{
+    //Q03
     public function index()
     {
         return view("index");
