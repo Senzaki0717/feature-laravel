@@ -46,7 +46,6 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $authors = Author::all();
-
         return view ('show', compact('post', 'authors'));
     }
 
@@ -79,6 +78,5 @@ class PostsController extends Controller
         }
         return redirect()->route('index');
     }
-    
 
 }
