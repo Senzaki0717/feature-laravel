@@ -1,11 +1,10 @@
-<h1>編集画面</h1>
-<<form action="{{ route('register.edit', ['id' => $post->id]) }}" method="post">
+<h1>新規作成画面</h1>
+<form action="{{ route('store.post') }}" method="post">
     @csrf
     <div>
         <label for="title">タイトル</label>
-        <input type="text" name="title" value="{{ $post->title }}">
+        <input type="text" name="title" id="title" placeholder="タイトルを入力してください">
     </div>
-
 
     <div>
         <label for="author_id">投稿者</label>
@@ -16,9 +15,10 @@
             @endforeach
         </select>
     </div>
+
     <div>
         <label for="content">本文</label>
-        <textarea name="content" id="" cols="30" rows="10">{{ $post->content }}</textarea>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="本文を入力してください"></textarea>
     </div>
 
     <div>
